@@ -1,0 +1,68 @@
+\doxysection{Doom\+Game Class Reference}
+\hypertarget{class_doom_game}{}\label{class_doom_game}\index{DoomGame@{DoomGame}}
+
+
+Implements specific game logic, such as internal game logic, player controls, and rendering.  
+
+
+Inheritance diagram for Doom\+Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_doom_game}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_doom_game_a673bb2f9f3511329f1fa517b76a086b6}{Internal\+Game\+Logic}} (\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}gs) override
+\item 
+int \mbox{\hyperlink{class_doom_game_a930275a7d4b0666033ab15893b9abd64}{Player\+Controls}} (\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}gs) override
+\item 
+int \mbox{\hyperlink{class_doom_game_ad0c17734ad1e678b6bba1330fa12e51c}{Game\+Render}} (\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}gs, \mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&fb, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}framebuffer\+\_\+texture, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*}font) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_game}{Game}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries run} (\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}gs, \mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&fb, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}framebuffer\+\_\+texture, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*}font)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_game}{Game} Cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements specific game logic, such as internal game logic, player controls, and rendering. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_doom_game_ad0c17734ad1e678b6bba1330fa12e51c}\label{class_doom_game_ad0c17734ad1e678b6bba1330fa12e51c} 
+\index{DoomGame@{DoomGame}!GameRender@{GameRender}}
+\index{GameRender@{GameRender}!DoomGame@{DoomGame}}
+\doxysubsubsection{\texorpdfstring{GameRender()}{GameRender()}}
+{\footnotesize\ttfamily int Doom\+Game\+::\+Game\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{gs,  }\item[{\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&}]{fb,  }\item[{SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}}]{framebuffer\+\_\+texture,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer,  }\item[{TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*}}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game}{Game}}.
+
+\Hypertarget{class_doom_game_a673bb2f9f3511329f1fa517b76a086b6}\label{class_doom_game_a673bb2f9f3511329f1fa517b76a086b6} 
+\index{DoomGame@{DoomGame}!InternalGameLogic@{InternalGameLogic}}
+\index{InternalGameLogic@{InternalGameLogic}!DoomGame@{DoomGame}}
+\doxysubsubsection{\texorpdfstring{InternalGameLogic()}{InternalGameLogic()}}
+{\footnotesize\ttfamily int Doom\+Game\+::\+Internal\+Game\+Logic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{gs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game}{Game}}.
+
+\Hypertarget{class_doom_game_a930275a7d4b0666033ab15893b9abd64}\label{class_doom_game_a930275a7d4b0666033ab15893b9abd64} 
+\index{DoomGame@{DoomGame}!PlayerControls@{PlayerControls}}
+\index{PlayerControls@{PlayerControls}!DoomGame@{DoomGame}}
+\doxysubsubsection{\texorpdfstring{PlayerControls()}{PlayerControls()}}
+{\footnotesize\ttfamily int Doom\+Game\+::\+Player\+Controls (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_game_state}{Game\+State}} \texorpdfstring{$\ast$}{*}}]{gs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_game}{Game}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/Визуал/\+Doom\+Game/tc/Doom\+Game.\+cpp\end{DoxyCompactItemize}

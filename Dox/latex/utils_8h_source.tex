@@ -1,0 +1,19 @@
+\doxysection{utils.\+h}
+\hypertarget{utils_8h_source}{}\label{utils_8h_source}\index{D:/Визуал/DoomGame/tc/utils.h@{D:/Визуал/DoomGame/tc/utils.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ uint32\_t\ pack\_color(\textcolor{keyword}{const}\ uint8\_t\ r,\ \textcolor{keyword}{const}\ uint8\_t\ g,\ \textcolor{keyword}{const}\ uint8\_t\ b,\ \textcolor{keyword}{const}\ uint8\_t\ a=255);}
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{void}\ unpack\_color(\textcolor{keyword}{const}\ uint32\_t\ \&color,\ uint8\_t\ \&r,\ uint8\_t\ \&g,\ uint8\_t\ \&b,\ uint8\_t\ \&a);}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{void}\ drop\_ppm\_image(\textcolor{keyword}{const}\ std::string\ filename,\ \textcolor{keyword}{const}\ std::vector<uint32\_t>\ \&image,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ w,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ h);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UTILS\_H}}
+\DoxyCodeLine{00013\ }
+
+\end{DoxyCode}

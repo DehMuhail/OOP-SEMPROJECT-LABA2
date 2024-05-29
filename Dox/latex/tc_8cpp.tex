@@ -1,0 +1,202 @@
+\doxysection{D\+:/Визуал/tc/tc/tc.cpp File Reference}
+\hypertarget{tc_8cpp}{}\label{tc_8cpp}\index{D:/Визуал/tc/tc/tc.cpp@{D:/Визуал/tc/tc/tc.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include "{}SDL.\+h"{}}\newline
+{\ttfamily \#include $<$SDL\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
+{\ttfamily \#include "{}tinyraycaster.\+h"{}}\newline
+{\ttfamily \#include "{}text.\+h"{}}\newline
+{\ttfamily \#include "{}SDL\+\_\+mixer.\+h"{}}\newline
+{\ttfamily \#include "{}Random\+Move.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_health_observer}{Health\+Observer}}
+\begin{DoxyCompactList}\small\item\em This is health observer pattern. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_player_state}{Player\+State}}
+\item 
+class \mbox{\hyperlink{classreloadpattern}{reloadpattern}}
+\item 
+class \mbox{\hyperlink{class_invulnerablepattern}{Invulnerablepattern}}
+\item 
+class \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}}
+\item 
+class \mbox{\hyperlink{class_game}{Game}}
+\begin{DoxyCompactList}\small\item\em template mathod\textbackslash{}pattern \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_doom_game}{Doom\+Game}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tc_8cpp_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{tc_8cpp_a8b52d0c7736944e422a464e8168f82e7}{is\+Shift\+Pressed}} = false
+\item 
+int \mbox{\hyperlink{tc_8cpp_a4831cd8e50ecd0770494d6daaed6f3f8}{BASE\+\_\+\+SPEED}} = 1
+\item 
+int \mbox{\hyperlink{tc_8cpp_af9b56b61a692a17c47d1e55b43b28320}{MAX\+\_\+\+SPEED}} = 2
+\item 
+bool \mbox{\hyperlink{tc_8cpp_ad9f6f77fa3ae4312180242c507095f52}{is\+Invulnerable}} = false
+\item 
+const Uint32 \mbox{\hyperlink{tc_8cpp_ac018129f0c6c8d82441ccc445308e376}{invulnerability\+Duration}} = 1000
+\item 
+Uint32 \mbox{\hyperlink{tc_8cpp_a99afd298fbcf79957a24a6b76a10126b}{invulnerability\+Start\+Time}} = SDL\+\_\+\+Get\+Ticks()
+\item 
+char \mbox{\hyperlink{tc_8cpp_aba5f9c82f9e36bb5a3c8d74f4f580b3d}{Mtimer}} \mbox{[}10\mbox{]}
+\item 
+bool \mbox{\hyperlink{tc_8cpp_afc9f4a8138449e9060e0efcb3bfcb682}{reload}} = false
+\item 
+const Uint32 \mbox{\hyperlink{tc_8cpp_a21b5a0dc67d5d582e1b8ce3251753111}{reload\+Duration}} = 1000
+\item 
+Uint32 \mbox{\hyperlink{tc_8cpp_ad1ed69bce1526c5f282e6a6de54f2332}{reload\+Moment}} = SDL\+\_\+\+Get\+Ticks()
+\item 
+Uint32 \mbox{\hyperlink{tc_8cpp_a9954a4892b17278eed3f88fd5b178e81}{timer\+Update}} = SDL\+\_\+\+Get\+Ticks()
+\item 
+Uint32 \mbox{\hyperlink{tc_8cpp_a13c6de5998982459c8b23094d9d02be1}{Time}} = SDL\+\_\+\+Get\+Ticks()
+\item 
+std\+::vector$<$ std\+::thread $>$ \mbox{\hyperlink{tc_8cpp_a08a20e9e5097748946810b9c9e5d7601}{threads}}
+\item 
+\mbox{\hyperlink{class_health_observer}{Health\+Observer}} \mbox{\hyperlink{tc_8cpp_aef349eaf1626cfadad3dc34ee2f3a020}{damage}}
+\item 
+\mbox{\hyperlink{classreloadpattern}{reloadpattern}} \mbox{\hyperlink{tc_8cpp_a13f4e8e01e69926818784bcd2dc310b9}{reloadp}}
+\item 
+\mbox{\hyperlink{class_invulnerablepattern}{Invulnerablepattern}} \mbox{\hyperlink{tc_8cpp_ab5b9de2f46b3216c297a6dfead0925ce}{Invulp}}
+\item 
+\mbox{\hyperlink{class_sound_manager}{Sound\+Manager}} \& \mbox{\hyperlink{tc_8cpp_a5a39a9b2ebd9c96a3880b2a617011de9}{sound}} = \mbox{\hyperlink{class_sound_manager_a1eab03fd32698c1d6319ae42bc97d679}{Sound\+Manager\+::\+Get\+Instance}}()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{tc_8cpp_af08ec37a8c99d747fb60fa15bc28678b}\label{tc_8cpp_af08ec37a8c99d747fb60fa15bc28678b} 
+\index{tc.cpp@{tc.cpp}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
+\index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{\_CRT\_SECURE\_NO\_WARNINGS}{\_CRT\_SECURE\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \#define \+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{tc_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{tc.cpp@{tc.cpp}!main@{main}}
+\index{main@{main}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{tc_8cpp_a4831cd8e50ecd0770494d6daaed6f3f8}\label{tc_8cpp_a4831cd8e50ecd0770494d6daaed6f3f8} 
+\index{tc.cpp@{tc.cpp}!BASE\_SPEED@{BASE\_SPEED}}
+\index{BASE\_SPEED@{BASE\_SPEED}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{BASE\_SPEED}{BASE\_SPEED}}
+{\footnotesize\ttfamily int BASE\+\_\+\+SPEED = 1}
+
+\Hypertarget{tc_8cpp_aef349eaf1626cfadad3dc34ee2f3a020}\label{tc_8cpp_aef349eaf1626cfadad3dc34ee2f3a020} 
+\index{tc.cpp@{tc.cpp}!damage@{damage}}
+\index{damage@{damage}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{damage}{damage}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_health_observer}{Health\+Observer}} damage}
+
+\Hypertarget{tc_8cpp_ac018129f0c6c8d82441ccc445308e376}\label{tc_8cpp_ac018129f0c6c8d82441ccc445308e376} 
+\index{tc.cpp@{tc.cpp}!invulnerabilityDuration@{invulnerabilityDuration}}
+\index{invulnerabilityDuration@{invulnerabilityDuration}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{invulnerabilityDuration}{invulnerabilityDuration}}
+{\footnotesize\ttfamily const Uint32 invulnerability\+Duration = 1000}
+
+\Hypertarget{tc_8cpp_a99afd298fbcf79957a24a6b76a10126b}\label{tc_8cpp_a99afd298fbcf79957a24a6b76a10126b} 
+\index{tc.cpp@{tc.cpp}!invulnerabilityStartTime@{invulnerabilityStartTime}}
+\index{invulnerabilityStartTime@{invulnerabilityStartTime}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{invulnerabilityStartTime}{invulnerabilityStartTime}}
+{\footnotesize\ttfamily Uint32 invulnerability\+Start\+Time = SDL\+\_\+\+Get\+Ticks()}
+
+\Hypertarget{tc_8cpp_ab5b9de2f46b3216c297a6dfead0925ce}\label{tc_8cpp_ab5b9de2f46b3216c297a6dfead0925ce} 
+\index{tc.cpp@{tc.cpp}!Invulp@{Invulp}}
+\index{Invulp@{Invulp}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{Invulp}{Invulp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_invulnerablepattern}{Invulnerablepattern}} Invulp}
+
+\Hypertarget{tc_8cpp_ad9f6f77fa3ae4312180242c507095f52}\label{tc_8cpp_ad9f6f77fa3ae4312180242c507095f52} 
+\index{tc.cpp@{tc.cpp}!isInvulnerable@{isInvulnerable}}
+\index{isInvulnerable@{isInvulnerable}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{isInvulnerable}{isInvulnerable}}
+{\footnotesize\ttfamily bool is\+Invulnerable = false}
+
+\Hypertarget{tc_8cpp_a8b52d0c7736944e422a464e8168f82e7}\label{tc_8cpp_a8b52d0c7736944e422a464e8168f82e7} 
+\index{tc.cpp@{tc.cpp}!isShiftPressed@{isShiftPressed}}
+\index{isShiftPressed@{isShiftPressed}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{isShiftPressed}{isShiftPressed}}
+{\footnotesize\ttfamily bool is\+Shift\+Pressed = false}
+
+\Hypertarget{tc_8cpp_af9b56b61a692a17c47d1e55b43b28320}\label{tc_8cpp_af9b56b61a692a17c47d1e55b43b28320} 
+\index{tc.cpp@{tc.cpp}!MAX\_SPEED@{MAX\_SPEED}}
+\index{MAX\_SPEED@{MAX\_SPEED}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_SPEED}{MAX\_SPEED}}
+{\footnotesize\ttfamily int MAX\+\_\+\+SPEED = 2}
+
+\Hypertarget{tc_8cpp_aba5f9c82f9e36bb5a3c8d74f4f580b3d}\label{tc_8cpp_aba5f9c82f9e36bb5a3c8d74f4f580b3d} 
+\index{tc.cpp@{tc.cpp}!Mtimer@{Mtimer}}
+\index{Mtimer@{Mtimer}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{Mtimer}{Mtimer}}
+{\footnotesize\ttfamily char Mtimer\mbox{[}10\mbox{]}}
+
+\Hypertarget{tc_8cpp_afc9f4a8138449e9060e0efcb3bfcb682}\label{tc_8cpp_afc9f4a8138449e9060e0efcb3bfcb682} 
+\index{tc.cpp@{tc.cpp}!reload@{reload}}
+\index{reload@{reload}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{reload}{reload}}
+{\footnotesize\ttfamily bool reload = false}
+
+\Hypertarget{tc_8cpp_a21b5a0dc67d5d582e1b8ce3251753111}\label{tc_8cpp_a21b5a0dc67d5d582e1b8ce3251753111} 
+\index{tc.cpp@{tc.cpp}!reloadDuration@{reloadDuration}}
+\index{reloadDuration@{reloadDuration}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{reloadDuration}{reloadDuration}}
+{\footnotesize\ttfamily const Uint32 reload\+Duration = 1000}
+
+\Hypertarget{tc_8cpp_ad1ed69bce1526c5f282e6a6de54f2332}\label{tc_8cpp_ad1ed69bce1526c5f282e6a6de54f2332} 
+\index{tc.cpp@{tc.cpp}!reloadMoment@{reloadMoment}}
+\index{reloadMoment@{reloadMoment}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{reloadMoment}{reloadMoment}}
+{\footnotesize\ttfamily Uint32 reload\+Moment = SDL\+\_\+\+Get\+Ticks()}
+
+\Hypertarget{tc_8cpp_a13f4e8e01e69926818784bcd2dc310b9}\label{tc_8cpp_a13f4e8e01e69926818784bcd2dc310b9} 
+\index{tc.cpp@{tc.cpp}!reloadp@{reloadp}}
+\index{reloadp@{reloadp}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{reloadp}{reloadp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classreloadpattern}{reloadpattern}} reloadp}
+
+\Hypertarget{tc_8cpp_a5a39a9b2ebd9c96a3880b2a617011de9}\label{tc_8cpp_a5a39a9b2ebd9c96a3880b2a617011de9} 
+\index{tc.cpp@{tc.cpp}!sound@{sound}}
+\index{sound@{sound}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{sound}{sound}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_sound_manager}{Sound\+Manager}}\& sound = \mbox{\hyperlink{class_sound_manager_a1eab03fd32698c1d6319ae42bc97d679}{Sound\+Manager\+::\+Get\+Instance}}()}
+
+\Hypertarget{tc_8cpp_a08a20e9e5097748946810b9c9e5d7601}\label{tc_8cpp_a08a20e9e5097748946810b9c9e5d7601} 
+\index{tc.cpp@{tc.cpp}!threads@{threads}}
+\index{threads@{threads}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{threads}{threads}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::thread$>$ threads}
+
+\Hypertarget{tc_8cpp_a13c6de5998982459c8b23094d9d02be1}\label{tc_8cpp_a13c6de5998982459c8b23094d9d02be1} 
+\index{tc.cpp@{tc.cpp}!Time@{Time}}
+\index{Time@{Time}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{Time}{Time}}
+{\footnotesize\ttfamily Uint32 Time = SDL\+\_\+\+Get\+Ticks()}
+
+\Hypertarget{tc_8cpp_a9954a4892b17278eed3f88fd5b178e81}\label{tc_8cpp_a9954a4892b17278eed3f88fd5b178e81} 
+\index{tc.cpp@{tc.cpp}!timerUpdate@{timerUpdate}}
+\index{timerUpdate@{timerUpdate}!tc.cpp@{tc.cpp}}
+\doxysubsubsection{\texorpdfstring{timerUpdate}{timerUpdate}}
+{\footnotesize\ttfamily Uint32 timer\+Update = SDL\+\_\+\+Get\+Ticks()}
+

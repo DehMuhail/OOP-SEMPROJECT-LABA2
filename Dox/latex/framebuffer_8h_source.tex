@@ -1,0 +1,23 @@
+\doxysection{framebuffer.\+h}
+\hypertarget{framebuffer_8h_source}{}\label{framebuffer_8h_source}\index{D:/Визуал/DoomGame/tc/framebuffer.h@{D:/Визуал/DoomGame/tc/framebuffer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FRAMEBUFFER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FRAMEBUFFER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_frame_buffer}{FrameBuffer}}\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ w,\ h;\ \textcolor{comment}{//\ image\ dimensions}}
+\DoxyCodeLine{00012\ \ \ \ \ std::vector<uint32\_t>\ img;\ \textcolor{comment}{//\ storage\ container}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ clear(\textcolor{keyword}{const}\ uint32\_t\ color);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_frame_buffer_affcc23efaef82b33561dbdcb33141fa8}{set\_pixel}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ y,\ \textcolor{keyword}{const}\ uint32\_t\ color);\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{struct_frame_buffer_a645c7699f471e3293cfa875061004d03}{draw\_rectangle}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ w,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ h,\ \textcolor{keyword}{const}\ uint32\_t\ color);}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FRAMEBUFFER\_H}}
+\DoxyCodeLine{00020\ }
+
+\end{DoxyCode}

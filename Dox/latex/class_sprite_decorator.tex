@@ -1,0 +1,65 @@
+\doxysection{Sprite\+Decorator Class Reference}
+\hypertarget{class_sprite_decorator}{}\label{class_sprite_decorator}\index{SpriteDecorator@{SpriteDecorator}}
+
+
+Abstract class of decorator pattern for extending \doxylink{class_sprite}{Sprite} functionalities.  
+
+
+
+
+{\ttfamily \#include $<$sprite.\+h$>$}
+
+Inheritance diagram for Sprite\+Decorator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sprite_decorator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sprite_decorator_afdce025e85f428bc96c032939dba8f1a}\label{class_sprite_decorator_afdce025e85f428bc96c032939dba8f1a} 
+{\bfseries Sprite\+Decorator} (\mbox{\hyperlink{class_sprite}{Sprite}} \&spr)
+\item 
+\Hypertarget{class_sprite_decorator_a8d87cf5d718ba9cd92dae3abfb7e20d4}\label{class_sprite_decorator_a8d87cf5d718ba9cd92dae3abfb7e20d4} 
+virtual bool {\bfseries Is\+Near\+Player} () const =0
+\item 
+\Hypertarget{class_sprite_decorator_af7af98b71cd5a1b1a02ae47c3566bff7}\label{class_sprite_decorator_af7af98b71cd5a1b1a02ae47c3566bff7} 
+virtual bool {\bfseries Is\+Player\+Inside} () const =0
+\item 
+\Hypertarget{class_sprite_decorator_a431ca839f39636bdb62f1f25b9fd2598}\label{class_sprite_decorator_a431ca839f39636bdb62f1f25b9fd2598} 
+virtual bool {\bfseries Is\+Dist\+Not\+Null} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_sprite}{Sprite}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_sprite}{Sprite}} \&s) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_sprite_decorator_a96e537e079b50019bf808614d7f1670c}\label{class_sprite_decorator_a96e537e079b50019bf808614d7f1670c} 
+\mbox{\hyperlink{class_sprite}{Sprite}} \& {\bfseries sprite}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_sprite}{Sprite}}}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries x}
+\item 
+float {\bfseries y}
+\item 
+size\+\_\+t {\bfseries tex\+\_\+id}
+\item 
+float {\bfseries player\+\_\+dist}
+\item 
+int {\bfseries health}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class of decorator pattern for extending \doxylink{class_sprite}{Sprite} functionalities. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/Визуал/\+Doom\+Game/tc/sprite.\+h\end{DoxyCompactItemize}

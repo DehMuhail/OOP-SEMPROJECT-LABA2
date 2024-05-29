@@ -1,0 +1,82 @@
+\doxysection{D\+:/Визуал/tc/tc/tinyraycaster.cpp File Reference}
+\hypertarget{tinyraycaster_8cpp}{}\label{tinyraycaster_8cpp}\index{D:/Визуал/tc/tc/tinyraycaster.cpp@{D:/Визуал/tc/tc/tinyraycaster.cpp}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include "{}utils.\+h"{}}\newline
+{\ttfamily \#include "{}tinyraycaster.\+h"{}}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tinyraycaster_8cpp_a525335710b53cb064ca56b936120431e}{\+\_\+\+USE\+\_\+\+MATH\+\_\+\+DEFINES}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tinyraycaster_8cpp_a043b1954c1714896f006c2f6e42ead53}{wall\+\_\+x\+\_\+texcoord}} (const float hitx, const float hity, const \mbox{\hyperlink{struct_texture}{Texture}} \&tex\+\_\+walls)
+\item 
+void \mbox{\hyperlink{tinyraycaster_8cpp_a3049ccc775e1d68694fff1426c5f91ed}{draw\+\_\+map}} (\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&fb, const std\+::vector$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $>$ \&sprites, const \mbox{\hyperlink{struct_texture}{Texture}} \&tex\+\_\+walls, const \mbox{\hyperlink{struct_map}{Map}} \&map, const size\+\_\+t cell\+\_\+w, const size\+\_\+t cell\+\_\+h)
+\item 
+void \mbox{\hyperlink{tinyraycaster_8cpp_a84193e163c679bc39baace67785b1c7d}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&fb, \mbox{\hyperlink{class_sprite}{Sprite}} \&sprite, const std\+::vector$<$ float $>$ \&depth\+\_\+buffer, const \mbox{\hyperlink{struct_player}{Player}} \&player, const \mbox{\hyperlink{struct_texture}{Texture}} \&tex\+\_\+sprites)
+\item 
+void \mbox{\hyperlink{tinyraycaster_8cpp_a54ba2b092f8c217355ff6eab924d9ba6}{render}} (\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&fb, \mbox{\hyperlink{struct_game_state}{Game\+State}} \&gs)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{tinyraycaster_8cpp_a18835e7fa17dce203131a779012c6cbc}{start\+Time}} = SDL\+\_\+\+Get\+Ticks()
+\item 
+Uint32 \mbox{\hyperlink{tinyraycaster_8cpp_a574854a8204b290469540a4052f22cd0}{elapsed\+Time}} = SDL\+\_\+\+Get\+Ticks() -\/ \mbox{\hyperlink{tinyraycaster_8cpp_a18835e7fa17dce203131a779012c6cbc}{start\+Time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{tinyraycaster_8cpp_a525335710b53cb064ca56b936120431e}\label{tinyraycaster_8cpp_a525335710b53cb064ca56b936120431e} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}}
+\index{\_USE\_MATH\_DEFINES@{\_USE\_MATH\_DEFINES}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{\_USE\_MATH\_DEFINES}{\_USE\_MATH\_DEFINES}}
+{\footnotesize\ttfamily \#define \+\_\+\+USE\+\_\+\+MATH\+\_\+\+DEFINES}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tinyraycaster_8cpp_a3049ccc775e1d68694fff1426c5f91ed}\label{tinyraycaster_8cpp_a3049ccc775e1d68694fff1426c5f91ed} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!draw\_map@{draw\_map}}
+\index{draw\_map@{draw\_map}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_map()}{draw\_map()}}
+{\footnotesize\ttfamily void draw\+\_\+map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&}]{fb,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{class_sprite}{Sprite}} $>$ \&}]{sprites,  }\item[{const \mbox{\hyperlink{struct_texture}{Texture}} \&}]{tex\+\_\+walls,  }\item[{const \mbox{\hyperlink{struct_map}{Map}} \&}]{map,  }\item[{const size\+\_\+t}]{cell\+\_\+w,  }\item[{const size\+\_\+t}]{cell\+\_\+h }\end{DoxyParamCaption})}
+
+\Hypertarget{tinyraycaster_8cpp_a84193e163c679bc39baace67785b1c7d}\label{tinyraycaster_8cpp_a84193e163c679bc39baace67785b1c7d} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&}]{fb,  }\item[{\mbox{\hyperlink{class_sprite}{Sprite}} \&}]{sprite,  }\item[{const std\+::vector$<$ float $>$ \&}]{depth\+\_\+buffer,  }\item[{const \mbox{\hyperlink{struct_player}{Player}} \&}]{player,  }\item[{const \mbox{\hyperlink{struct_texture}{Texture}} \&}]{tex\+\_\+sprites }\end{DoxyParamCaption})}
+
+\Hypertarget{tinyraycaster_8cpp_a54ba2b092f8c217355ff6eab924d9ba6}\label{tinyraycaster_8cpp_a54ba2b092f8c217355ff6eab924d9ba6} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!render@{render}}
+\index{render@{render}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_frame_buffer}{Frame\+Buffer}} \&}]{fb,  }\item[{\mbox{\hyperlink{struct_game_state}{Game\+State}} \&}]{gs }\end{DoxyParamCaption})}
+
+\Hypertarget{tinyraycaster_8cpp_a043b1954c1714896f006c2f6e42ead53}\label{tinyraycaster_8cpp_a043b1954c1714896f006c2f6e42ead53} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!wall\_x\_texcoord@{wall\_x\_texcoord}}
+\index{wall\_x\_texcoord@{wall\_x\_texcoord}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{wall\_x\_texcoord()}{wall\_x\_texcoord()}}
+{\footnotesize\ttfamily int wall\+\_\+x\+\_\+texcoord (\begin{DoxyParamCaption}\item[{const float}]{hitx,  }\item[{const float}]{hity,  }\item[{const \mbox{\hyperlink{struct_texture}{Texture}} \&}]{tex\+\_\+walls }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{tinyraycaster_8cpp_a574854a8204b290469540a4052f22cd0}\label{tinyraycaster_8cpp_a574854a8204b290469540a4052f22cd0} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!elapsedTime@{elapsedTime}}
+\index{elapsedTime@{elapsedTime}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{elapsedTime}{elapsedTime}}
+{\footnotesize\ttfamily Uint32 elapsed\+Time = SDL\+\_\+\+Get\+Ticks() -\/ \mbox{\hyperlink{tinyraycaster_8cpp_a18835e7fa17dce203131a779012c6cbc}{start\+Time}}}
+
+\Hypertarget{tinyraycaster_8cpp_a18835e7fa17dce203131a779012c6cbc}\label{tinyraycaster_8cpp_a18835e7fa17dce203131a779012c6cbc} 
+\index{tinyraycaster.cpp@{tinyraycaster.cpp}!startTime@{startTime}}
+\index{startTime@{startTime}!tinyraycaster.cpp@{tinyraycaster.cpp}}
+\doxysubsubsection{\texorpdfstring{startTime}{startTime}}
+{\footnotesize\ttfamily Uint32 start\+Time = SDL\+\_\+\+Get\+Ticks()}
+

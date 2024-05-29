@@ -1,0 +1,105 @@
+\doxysection{Texture Struct Reference}
+\hypertarget{struct_texture}{}\label{struct_texture}\index{Texture@{Texture}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_texture_acf71346840c1389e10aa60341c88cd6f}{Texture}} (const std\+::string filename, const uint32\+\_\+t format)
+\begin{DoxyCompactList}\small\item\em // Constructor for the \doxylink{struct_texture}{Texture} class, which loads and processes an image file \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_texture_a585b68739ac44eab9f3fd7af632a36f5}{get}} (const size\+\_\+t i, const size\+\_\+t j, const size\+\_\+t idx) const
+\begin{DoxyCompactList}\small\item\em Retrieves a specific pixel value from the texture. \end{DoxyCompactList}\item 
+std\+::vector$<$ uint32\+\_\+t $>$ \mbox{\hyperlink{struct_texture_a064eb8ab193c44291b15250ce28a5e15}{get\+\_\+scaled\+\_\+column}} (const size\+\_\+t texture\+\_\+id, const size\+\_\+t tex\+\_\+coord, const size\+\_\+t column\+\_\+height) const
+\begin{DoxyCompactList}\small\item\em Retrieves a scaled column of pixels from the texture. \end{DoxyCompactList}\item 
+\Hypertarget{struct_texture_ad7d36afa46a9d3900780737ff22509d2}\label{struct_texture_ad7d36afa46a9d3900780737ff22509d2} 
+void {\bfseries operator=} (\mbox{\hyperlink{struct_texture}{Texture}} \&T)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_texture_ac4bf974e7267c354830c247043e12cca}\label{struct_texture_ac4bf974e7267c354830c247043e12cca} 
+size\+\_\+t {\bfseries img\+\_\+w}
+\item 
+\Hypertarget{struct_texture_a422c3d1f795233e12bc6929874ba0f64}\label{struct_texture_a422c3d1f795233e12bc6929874ba0f64} 
+size\+\_\+t {\bfseries img\+\_\+h}
+\item 
+\Hypertarget{struct_texture_a9a48703b27907d71f87927b937c371ab}\label{struct_texture_a9a48703b27907d71f87927b937c371ab} 
+size\+\_\+t {\bfseries count}
+\item 
+\Hypertarget{struct_texture_aba30cf7e7360d95519d14cd4e90b8237}\label{struct_texture_aba30cf7e7360d95519d14cd4e90b8237} 
+size\+\_\+t {\bfseries size}
+\item 
+\Hypertarget{struct_texture_ac2c3c5a74bc242770c17c17fc5f07cea}\label{struct_texture_ac2c3c5a74bc242770c17c17fc5f07cea} 
+std\+::vector$<$ uint32\+\_\+t $>$ {\bfseries img}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_texture_acf71346840c1389e10aa60341c88cd6f}\label{struct_texture_acf71346840c1389e10aa60341c88cd6f} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string}]{filename,  }\item[{const uint32\+\_\+t}]{format }\end{DoxyParamCaption})}
+
+
+
+// Constructor for the \doxylink{struct_texture}{Texture} class, which loads and processes an image file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & \\
+\hline
+{\em format} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_texture_a585b68739ac44eab9f3fd7af632a36f5}\label{struct_texture_a585b68739ac44eab9f3fd7af632a36f5} 
+\index{Texture@{Texture}!get@{get}}
+\index{get@{get}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily uint32\+\_\+t Texture\+::get (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{i,  }\item[{const size\+\_\+t}]{j,  }\item[{const size\+\_\+t}]{idx }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a specific pixel value from the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+{\em idx} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\Hypertarget{struct_texture_a064eb8ab193c44291b15250ce28a5e15}\label{struct_texture_a064eb8ab193c44291b15250ce28a5e15} 
+\index{Texture@{Texture}!get\_scaled\_column@{get\_scaled\_column}}
+\index{get\_scaled\_column@{get\_scaled\_column}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{get\_scaled\_column()}{get\_scaled\_column()}}
+{\footnotesize\ttfamily std\+::vector$<$ uint32\+\_\+t $>$ Texture\+::get\+\_\+scaled\+\_\+column (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{texture\+\_\+id,  }\item[{const size\+\_\+t}]{tex\+\_\+coord,  }\item[{const size\+\_\+t}]{column\+\_\+height }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves a scaled column of pixels from the texture. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+\_\+id} & \\
+\hline
+{\em tex\+\_\+coord} & \\
+\hline
+{\em column\+\_\+height} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/Визуал/\+Doom\+Game/tc/textures.\+h\item 
+D\+:/Визуал/\+Doom\+Game/tc/textures.\+cpp\end{DoxyCompactItemize}

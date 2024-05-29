@@ -1,0 +1,42 @@
+\doxysection{tinyraycaster.\+h}
+\hypertarget{tinyraycaster_8h_source}{}\label{tinyraycaster_8h_source}\index{D:/Визуал/tc/tc/tinyraycaster.h@{D:/Визуал/tc/tc/tinyraycaster.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TINYRAYCASTER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TINYRAYCASTER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}map.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}player.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}sprite.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}framebuffer.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}textures.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_game_state}{GameState}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{struct_map}{Map}}\ map;}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{struct_player}{Player}}\ player;}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<Sprite>\ monsters;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ tex\_walls;}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ tex\_monst;}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{struct_texture}{Texture}}\ tex\_weapon;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ shoot\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{struct_game_state}{GameState}}\&\ operator=(\mbox{\hyperlink{struct_game_state}{GameState}}\&\&\ gs)}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ this-\/>shoot\ =\ gs.shoot;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ this-\/>map\ =\ gs.map;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ this-\/>player\ =\ gs.player;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ this-\/>monsters\ =\ gs.monsters;}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ this-\/>tex\_walls\ =\ gs.tex\_walls;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ this-\/>tex\_monst\ =\ gs.tex\_monst;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ this-\/>tex\_weapon\ =\ gs.tex\_weapon;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ this-\/>monsters\ =\ gs.monsters;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}*\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ render(\mbox{\hyperlink{struct_frame_buffer}{FrameBuffer}}\ \&fb,\ \mbox{\hyperlink{struct_game_state}{GameState}}\ \&gs);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TINYRAYCASTER\_H}}
+\DoxyCodeLine{00044\ }
+
+\end{DoxyCode}
